@@ -1,0 +1,323 @@
+body{
+	position: fixed;
+	display: flex;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+.p-relative{
+	position: relative!important;
+}
+.w-0{
+	width: 25%!important;
+}
+.small{
+	width: 35%!important;
+	overflow:unset!important;
+}
+.aside{
+	position: relative;
+	width: 45%;
+	/*height: 100%;*/
+	transition: width .3s;
+}
+.aside .fotoBlur{
+	width: 100%;
+	height: 100%;
+	background-image: url(img/foto.jpeg);
+	background-repeat: no-repeat;
+	/*background-position: center;*/
+	background-size: cover;
+	filter: blur(50px);
+}
+.aside .containerFotoRound{
+    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%; 
+    left: 0;
+    right: 0;
+}
+.aside .fotoRound{
+	margin-top: 3rem;
+	left: 50%;
+	position: relative;
+	background-image: url(img/foto.jpeg);
+	background-repeat: no-repeat;
+	/*background-position: center;*/
+	background-size: cover;
+	border-radius: 50%;
+	height:450px;
+	width:450px;
+	transform: translate(-50%);
+}
+
+.main{
+	background-color: white;
+	position: relative;
+	height: 100%;
+	width: 55%;
+	transition: width .3s;
+}
+.main-container{
+	position: relative;
+	overflow: auto;
+	height: 100%;
+}
+
+.main:before{
+	content: ''; 
+    position: absolute; /* Абсолютное позиционирование */
+    left: -80px; top: 0px; /* Положение треугольника */
+    border: 80px solid transparent; /* Прозрачные границы */
+    border-top: 100vh solid white; /* Добавляем треугольник */
+    border-right: 0px solid white;
+}
+.rhombus-container{
+	position: relative;
+	padding-right: 1.25rem;
+	padding-left: 1.25rem;
+}
+.rhombus{
+	margin:0;
+	display: block;
+	width: 10px;
+	height: 10px;
+	transform: rotate(45deg);
+	border: 1px solid #212529;	
+}
+.custom-hr{
+	padding: .5rem 2.5rem;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.custom-hr:before{
+	content: '';
+	display: block;
+	background-color: #212529;
+	width: 100%;
+	height: 1px;
+	position: relative;
+	margin-top: -1px;
+	top: 50%;
+}
+.custom-hr:after{
+	content: '';
+	display: block;
+	background-color: #212529;
+	width: 100%;
+	height: 1px;
+	position: relative;
+	margin-top: -1px;
+	top: 50%;
+}
+tbody h6{
+	font-size: 14px;
+	margin-bottom: 1px;
+}
+
+
+.logoJob{
+	height: 1.5rem;
+	margin-right: .5rem;
+}
+.congratulation{
+	font-size: 4rem;
+}
+.fullСongratulation{
+	display: inline;
+}
+.smallСongratulation{
+	display: none;
+}
+
+.carousel-container{
+	/*padding-right: 3rem;
+    padding-left: 3rem;*/
+}
+.carousel{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+    margin-right: 1.5rem;
+    margin-left: 1.5rem;
+}
+.carousel-caption h5{
+	font-size: 2rem;
+	background-color: rgba(255,255,255, 0.6);
+	margin-bottom: 0;
+	padding-bottom: .5rem;
+}
+.carousel-caption p{
+	font-weight: 600;
+	font-size: 1.3rem;
+	background-color: rgba(255,255,255, 0.6);
+}
+
+
+.button-gift{
+	font-size: 1.8rem;
+	position:fixed;
+	height: 50px;
+	width: 50px;
+	line-height: 50px;
+	display: inline-block;
+	border-radius: 50%;
+	bottom: 30px;
+	right: 30px;
+	text-align: center;
+	vertical-align: middle;
+	box-shadow: 0 0rem 1rem rgba(0,0,0,.15);
+	background-color: red;
+	z-index: 100;
+	cursor: pointer;
+	user-select: none;
+	transition: .3s;
+	animation-name: rotation;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+.button-gift:hover{
+	box-shadow: 0 0rem 1.5rem rgba(0,0,0,.15);
+	height: 56px;
+	width: 56px;
+	line-height: 56px;
+	bottom: 27px;
+	right: 27px;
+}
+@keyframes rotation {
+    0% {
+        transform:rotate(0deg);
+    }
+    100% {
+        transform:rotate(360deg);
+    }
+}
+
+
+.gifts{display: none;}
+.gifts.show{
+	width: 65%;
+}
+
+
+@media (max-width: 1900px) {
+	.main{
+		width: 58%;
+	}
+	.aside{
+		width: 42%;
+	}
+	tbody h6{
+		font-size: 17px;
+		margin-bottom: 1px;
+	}
+}
+@media (max-width: 1400px) {
+	.congratulation{
+		font-size: 3rem;
+	}
+	.aside .fotoRound{
+		height:350px;
+		width:350px;
+	}
+	.main{
+		width: 55%;
+	}
+	.aside{
+		width: 45%;
+	}
+	tbody h6{
+		font-size: 14px;
+		margin-bottom: 1px;
+	}
+}
+@media (max-width: 1150px) {
+	.congratulation{
+		font-size: 2.5rem;
+	}
+	.aside .fotoRound{
+		height:300px;
+		width:300px;
+	}
+}
+@media (max-width: 1000px) {
+	.fullСongratulation{
+		display: none;
+	}
+	.smallСongratulation{
+		display: inline;
+	}
+	.congratulation{
+		font-size: 2.5rem;
+	}
+	.aside .fotoRound{
+		height:300px;
+		width:300px;
+	}
+	.main{
+		width: 65%;
+	}
+	.aside{
+		width: 35%;
+	}
+}
+@media (max-width: 850px) {
+	body{
+		position: relative;
+		display: block;
+		top: auto;bottom: auto;left: auto;right: auto;
+	}
+	.aside{
+		width: 100%;
+	}
+	.aside .containerFotoRound{
+		position: relative;
+		display: flex;
+		flex-direction: column;
+	}
+	.aside .containerFotoRound h1{
+		margin-bottom: 2rem;
+	}
+	.aside .fotoBlur{
+		position: absolute;
+	}
+	.main{
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+	}
+	.main:before{
+		display: none;
+	}
+
+	.fullСongratulation{
+		display: none;
+	}
+	.smallСongratulation{
+		display: inline;
+	}
+	.congratulation{
+		font-size: 2.5rem;
+	}
+	.aside .fotoRound{
+		height:300px;
+		width:300px;
+	}
+	.carousel-caption.d-md-block.d-none{
+		display: block!important;
+	}
+	.carousel-container{
+		padding-right: 1rem;
+    	padding-left: 1rem;
+	}
+	.carousel{
+    	margin-right: 1rem;
+    	margin-left: 1rem;
+	}
+}
